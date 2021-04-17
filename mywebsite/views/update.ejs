@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= page %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<style>
+    body {
+        background-color: burlywood;
+    }
+
+    .title-text {
+        justify-content: center;
+        text-align: center;
+        font-size: 50px;
+        color: brown;
+    }
+
+    .btn {
+        margin: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-decoration: none;
+        color: brown;
+
+        font-size: 30px;
+        justify-content: center;
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .btn:hover {
+
+        color: black;
+        font-weight: bold;
+        border: 2px black;
+        box-shadow: 7px 7px brown;
+        cursor: pointer;
+
+    }
+</style>
+
+<body>
+    <h1 class="title-text">Create your CV </h1>
+    <form action="/update/<%=Cv._id%>" method="POST">
+        <div class="cvForm">
+            <div class="edu">
+                <h2>Education</h2>
+                <input type="text" name="name" value="<%=Cv.name%>" required>
+                <input type="text" name="Instititute_name" value="<%=Cv.Instititute_name%>" required>
+                <input type="text" name="Program" value="<%=Cv.Program%>" required>
+                <input type="date" name="start_Date1" value="<%=Cv.start_Date1%>" required>
+                <input type="date" name="End_Date1" value="<%=Cv.End_Date1%>" required>
+                <input type="text" name="Field" value="<%=Cv.Field%>" required>
+            </div>
+            <Br></Br>
+
+            <div class="work">
+                <h2>Work Experience</h2>
+                <input type="text" name="Company_name" value="">
+                <input type="text" name="Designation" value="">
+                <input type="date" name="start_Date2" value="">
+                <input type="date" name="End_Date2" value="">
+                <textarea name="Responsibilities" id=" text" cols="30" rows="3"></textarea>
+
+            </div>
+            <Br></Br>
+            <div class="activities">
+                <h2>Extra curricular activities</h2>
+                <textarea name="activity" id="text" cols="40" rows="5"></textarea>
+            </div>
+            <Br></Br>
+            <div class="Research">
+                <h2>Research Experience</h2>
+                <input type="text" name="Project_name" value="">
+                <input type="date" name="start_Date3" value="">
+                <input type="date" name="End_Date3" value="">
+                <input type="text" name="field" value="">
+            </div>
+            <Br></Br>
+            <div class="Languages">
+                <h2>Languages</h2>
+                <textarea name="Languages" id="text" cols="40" rows="5"></textarea>
+            </div>
+            <Br></Br>
+            <div class="Refrences">
+                <h2>Refrences</h2>
+                <input type="text" name="name2" value="">
+                <input type="text" name="Designation2" value="">
+                <input type="text" name="Company" value="">
+                <input type="number" name="Contact" value="">
+                <input type="email" name="Email" value="">
+            </div>
+            <Br></Br>
+            <div class="btn">
+                <button class="btn" type="submit">Submit</button>
+            </div>
+    </form>
+</body>
+
+</html>

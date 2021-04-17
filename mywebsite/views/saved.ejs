@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .bk{
+        background-color: cadetblue;
+    }
+    .btn{
+        color: white;
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+    }
+    .btn:hover{
+        background-color: white;
+        color: black;
+    }
+    
+</style>
+
+<body>
+    <header class="bk">
+    <img src="/images/cv.jpg" alt="" width="250" height="250" >
+    <div class="container-fluid">
+        <table class="table table-bordered table-condensed">
+            <thead>
+                <tr>
+                    <h2>My CV:</h2>
+                    <th style="width: 5.5%;">
+                        Name
+                    </th>
+                    <th style="width: 5.5%;">
+                        Institute Name
+                    </th>
+                    <th style="width: 5.5%;">
+                        Program</th>
+                    <th>
+                        start_Date1
+                    </th>
+                    <th>
+                        End_Date1
+                    </th>
+                    <th>Field</th>
+                    <th>
+                        Languages
+                    </th>
+    
+                    <th>
+                        activity
+                    </th>
+                    <th>
+                        Project_name
+                    </th>
+                    <th>
+                        start_Date2
+                    </th>
+                    <th>
+                        End_Date2
+                    </th>
+                    <th>
+                        field
+                    </th>
+                    <th>
+                        Company_name
+                    </th>
+                    <th>
+                        Designation2
+                    </th>
+                    <th>
+                        start_Date3
+                    </th>
+                    <th>
+                        End_Date3
+                    </th>
+                    <th>
+                        &nbsp;
+                    </th>
+                    <th>
+                        &nbsp;
+                    </th>
+    
+    
+    
+    
+    
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0; i<Cv.length ;i++){%>
+                    <tr>
+                        <td>
+                            <%=Cv[i].name%>
+                        </td>
+    
+                        <td>
+                            <%=Cv[i].Instititute_name%>
+                        </td>
+                        <td>
+                            <%=Cv[i].Program%>
+                        </td>
+                        <td>
+                            <%=Cv[i].start_Date1%>
+                        </td>
+                        <td>
+                            <%=Cv[i].End_Date1%>
+                        </td>
+                        <td>
+                            <%=Cv[i].Field%>
+                        </td>
+                        <td>
+                            <%=Cv[i].Languages%>
+                        </td>
+                        <td>
+                            <%=Cv[i].activity%>
+                        </td>
+                        <td>
+                            <%=Cv[i].Project_name %>
+                        </td>
+                        <td>
+                            <%=Cv[i]. start_Date2%>
+                        </td>
+                        <td>
+                            <%=Cv[i].End_Date2%>
+                        </td>
+                        <td>
+                            <%=Cv[i].field%>
+                        </td>
+                        <td>
+                            <%=Cv[i].Company_name%>
+                        </td>
+                        <td>
+                            <%=Cv[i].Designation2%>
+                        </td>
+                        <td>
+                            <%=Cv[i].start_Date3%>
+                        </td>
+                        <td>
+                            <%=Cv[i].End_Date3%>
+                        </td>
+                       
+    
+    
+    
+                        <td>
+                            <form action="/updateView/<%=Cv[i]._id%>" method="GET">
+                                <button class="btn">Update</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="/delete/<%=Cv[i]._id%>" method="POST">
+                                <button class="btn">Delete</button>
+                            </form>
+                        </td>
+    
+    
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+        
+
+    </div>
+</header>
+    
+</body>
+
+</html>

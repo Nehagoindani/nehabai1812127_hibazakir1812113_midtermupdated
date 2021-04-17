@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= page %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<style>
+    body {
+        background-color: burlywood;
+    }
+
+    .title-text {
+        background-color: brown;
+        justify-content: center;
+        text-align: center;
+        font-size: 50px;
+        color:white;
+    }
+
+    .btn {
+        margin: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-decoration: none;
+        color: brown;
+        font-weight: bold;
+
+        font-size: 30px;
+        justify-content: center;
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .btn:hover {
+
+        color: black;
+        font-weight: bold;
+        border: 2px black;
+        box-shadow: 7px 7px brown;
+        cursor: pointer;
+
+    }
+</style>
+
+<body>
+    <h1 class="title-text">Create your CV </h1>
+    <form action="/educreate" method="POST">
+        <div class="cvForm">
+            <div class="edu">
+                <h2>Education</h2>
+                <input type="text" name="name" placeholder="name" required>
+                <input type="text" name="Instititute_name" placeholder="Institute name" required>
+                <input type="text" name="Program" placeholder="Program" required>
+                <input type="date" name="start_Date1" placeholder="start Date" required>
+                <input type="date" name="End_Date1" placeholder="End Date" required>
+                <input type="text" name="Field" placeholder="Field" required>
+            </div>
+            <Br></Br>
+
+            <div class="work">
+                <h2>Work Experience</h2>
+                <input type="text" name="Company_name" placeholder="Company name" required >
+                <input type="text" name="Designation" placeholder="Designation" required>
+                <input type="date" name="start_Date2" placeholder="start Date" required>
+                <input type="date" name="End_Date2" placeholder="End Date" required>
+                <textarea name="Responsibilities" placeholder="Resposibilities" id="text" cols="30" rows="3"required></textarea>
+
+            </div>
+            <Br></Br>
+            <div class="activities">
+                <h2>Extra curricular activities</h2>
+                <textarea name="activity" placeholder="Extra curricular activities" id="text" cols="40"
+                    rows="5" required></textarea>
+            </div>
+            <Br></Br>
+            <div class="Research">
+                <h2>Research Experience</h2>
+                <input type="text" name="Project_name" placeholder="Name of project" required >
+                <input type="date" name="start_Date3" placeholder="start Date" required>
+                <input type="date" name="End_Date3" placeholder="End Date"required >
+                <input type="text" name="field" placeholder="Field"required >
+            </div>
+            <Br></Br>
+            <div class="Languages">
+                <h2>Languages</h2>
+                <textarea name="Languages" placeholder="Languages" id="text" cols="40" rows="5" required></textarea>
+            </div>
+            <Br></Br>
+            <div class="Refrences">
+                <h2>Refrences</h2>
+                <input type="text" name="name2" placeholder="name" required >
+                <input type="text" name="Designation2" placeholder="Designation" required>
+                <input type="text" name="Company" placeholder="Company" required>
+                <input type="number" name="Contact" placeholder="Contact" required>
+                <input type="email" name="Email" placeholder="Email" required>
+            </div>
+            <Br></Br>
+            <div class="btn">
+                <button class="btn" type="submit">Submit</button>
+            </div>
+    </form>
+</body>
+
+</html>
